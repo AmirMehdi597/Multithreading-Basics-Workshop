@@ -1,8 +1,16 @@
 public class Example02 {
-    //TODO(1): Create a class that implements the Runnable interface
+    static class myrunnable implements Runnable{
+        @Override
+        public void run() {
+            for (int i = 1; i <= 20; i++) {
+                System.out.println("greetings");
+            }
+        }
+    }
     public static void main(String[] args)
     {
-        //TODO(2): start a thread that runs the Runnable
-        //TODO(0): print 20 greetings
+       myrunnable n = new myrunnable();
+       Thread t1 = new Thread(n);
+       t1.start();
     }
 }
